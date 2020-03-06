@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Earl\\Desktop\\webdevelopment\\CSharpBasic\\test2\\test2\\test2.csproj",
+      "projectUniqueName": "C:\\Users\\Earl\\Source\\Repos\\cr2000\\CSharpBasic\\test2\\test2\\test2.csproj",
       "projectName": "test2",
-      "projectPath": "C:\\Users\\Earl\\Desktop\\webdevelopment\\CSharpBasic\\test2\\test2\\test2.csproj",
+      "projectPath": "C:\\Users\\Earl\\Source\\Repos\\cr2000\\CSharpBasic\\test2\\test2\\test2.csproj",
       "packagesPath": "C:\\Users\\Earl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Earl\\Desktop\\webdevelopment\\CSharpBasic\\test2\\test2\\obj\\",
+      "outputPath": "C:\\Users\\Earl\\Source\\Repos\\cr2000\\CSharpBasic\\test2\\test2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Earl\\AppData\\Roaming\\NuGet\\NuGet.Config",

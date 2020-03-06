@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Earl\\Desktop\\webdevelopment\\CSharpBasic\\test3\\test3\\test3.csproj": {}
+    "C:\\Users\\Earl\\Source\\Repos\\cr2000\\CSharpBasic\\test3\\test3\\test3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Earl\\Desktop\\webdevelopment\\CSharpBasic\\test3\\test3\\test3.csproj": {
+    "C:\\Users\\Earl\\Source\\Repos\\cr2000\\CSharpBasic\\test3\\test3\\test3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Earl\\Desktop\\webdevelopment\\CSharpBasic\\test3\\test3\\test3.csproj",
+        "projectUniqueName": "C:\\Users\\Earl\\Source\\Repos\\cr2000\\CSharpBasic\\test3\\test3\\test3.csproj",
         "projectName": "test3",
-        "projectPath": "C:\\Users\\Earl\\Desktop\\webdevelopment\\CSharpBasic\\test3\\test3\\test3.csproj",
+        "projectPath": "C:\\Users\\Earl\\Source\\Repos\\cr2000\\CSharpBasic\\test3\\test3\\test3.csproj",
         "packagesPath": "C:\\Users\\Earl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Earl\\Desktop\\webdevelopment\\CSharpBasic\\test3\\test3\\obj\\",
+        "outputPath": "C:\\Users\\Earl\\Source\\Repos\\cr2000\\CSharpBasic\\test3\\test3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Earl\\AppData\\Roaming\\NuGet\\NuGet.Config",
