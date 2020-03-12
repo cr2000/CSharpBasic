@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleApp2
+namespace Exercise03
 {
     class Program03
     {
@@ -25,7 +25,7 @@ namespace ConsoleApp2
 
 
 
-            //malce me machi zadchava
+
 
             string[] names = new string[5];
 

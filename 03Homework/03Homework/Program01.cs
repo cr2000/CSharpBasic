@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _03Homework
+namespace Exercise01
 {
     class Program01
     {
@@ -46,7 +46,7 @@ namespace _03Homework
 
 
                 }
-                Console.WriteLine("Thanks for playing! \n-Please press ENTER to close the program.");
+                Console.WriteLine("Thanks for playing! \nPlease press ENTER to close the program.");
 
 
             }
