@@ -6,30 +6,79 @@ namespace Homework_Class_3
     {
         static void Main(string[] args)
         {
-            string[] names = new string[10];
-            var index = 0;
-            Console.WriteLine("Please enter a name:");
+
+            //#region taskwithouthelp
+            //string[] names = new string[10];
+            //var index = 0;
+            //Console.WriteLine("Please enter a name:");
+            //while (true)
+            //{
+            //    string userName = Console.ReadLine();
+            //    if (userName.Length > 1)
+            //    { 
+            //        names[index] = userName;
+            //        index++;
+            //    }
+            //    Console.WriteLine("Would you like to enter another name? Y/N?");
+            //    if (userName.ToLower() == "n")
+            //    {
+
+            //        Console.WriteLine("\nThe entered names are: ");
+            //        foreach (var name in names)
+            //        {
+            //            Console.Write(name + " ");
+            //        }
+            //        break;
+            //    }
+            //}
+            //#endregion
+            //Console.ReadLine();
+
+            #region kodot od Goce
+
+            string[] names = new string[] { };
+            char[] answers = new char[] { 'Y', 'N' };
             while (true)
             {
-                string userName = Console.ReadLine();
-                if (userName.Length > 1)
+                Console.WriteLine("Please enter a name");
+                string name = Console.ReadLine();
+                int index = names.Length;
+                Array.Resize(ref names, names.Length + 1);
+                names[index] = name;
+                char answer;
+                while (true)
                 {
-                    names[index] = userName;
-                    index++;
+                    Console.WriteLine("Please press Y to continue or N to STOP and display names");
+                    bool isConverted = char.TryParse(Console.ReadLine(), out answer);
+                    if (isConverted && Array.IndexOf(answers, answer) != 1)
+                        break;
+
+
                 }
-                Console.WriteLine("Would you like to enter another name? Y/N?");
-                if (userName.ToLower() == "n")
+                if (Char.ToUpper(answer) == 'Y')
+                    continue;
+                else
                 {
-                   
-                    Console.WriteLine("\nThe entered names are: ");
-                    foreach (var name in names)
+                    foreach (var userName in names)
                     {
-                        Console.Write(name + " ");
-                    }
+                        Console.WriteLine("---------------------------------");
+                        Console.WriteLine(userName);
+                        Console.WriteLine("---------------------------------");
+
+                    };
+                    Console.ReadLine();
+
                     break;
                 }
+
             }
-            Console.ReadLine();
+
+
+
+
+
+            #endregion
+
         }
     }
 }
