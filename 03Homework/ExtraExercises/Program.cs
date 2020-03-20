@@ -13,71 +13,86 @@ namespace ExtraExercises
             {
                 sum += item;
             }
+            Console.WriteLine("\b\b***TASK 01***");
             Console.WriteLine("The sum of the first ten natural numbers is: " + sum);
             Console.WriteLine("\n\nInitializing task2... please press Enter!");
             Console.ReadLine();
 
             #endregion
 
+
+
+
+
             #region task2
             //2.Write a program in C# Sharp to read 10 numbers from keyboard and find their sum and average.
 
-            //int i, n, sumFromInput = 0;
-            //double avg;
+            int i, n, sumFromInput = 0;
+            double avg;
 
-            //Console.Write("\n\n");
-            //Console.Write("Read 10 numbers and calculate sum and average:\n");
-            //Console.Write("----------------------------------------------");
-            //Console.Write("\n\n");
+            Console.Write("\n\n");
+            Console.Write("Read 10 numbers and calculate sum and average:\n");
+            Console.Write("----------------------------------------------");
+            Console.Write("\n\n");
 
-            //Console.Write("Input the 10 numbers : \n");
-            //for (i = 1; i <= 10; i++)
-            //{
-            //    Console.Write("Number-{0} :", i);
+            Console.Write("Input the 10 numbers : \n");
+            for (i = 1; i <= 10; i++)
+            {
+                Console.Write("Number-{0} :", i);
 
-            //    n = Convert.ToInt32(Console.ReadLine());
-            //    sumFromInput += n;
-            //}
-            //avg = sumFromInput / 10.0;
-            //Console.Write("The sum of the 10 numbers you entered is : {0}\nThe Average is : {1}\n", sumFromInput, avg);
-            //Console.WriteLine("\n\nInitializing task3... please press Enter!");
-            //Console.ReadLine();
+                n = Convert.ToInt32(Console.ReadLine());
+                sumFromInput += n;
+            }
+            avg = sumFromInput / 10.0;
+
+            Console.WriteLine("\b\b***TASK 02***");
+            Console.Write("The sum of the 10 numbers you entered is : {0}\nThe Average is : {1}\n", sumFromInput, avg);
+            Console.WriteLine("\n\nInitializing task3... please press Enter!");
+            Console.ReadLine();
 
 
             #endregion
 
+
+
+
+
+
             #region task3
+
             //         3.Declare and init array of 10 integers by your choise. 
             //          Find maximum and minimum element in that array and their indexes.
 
-            //int[] maxAndMinArray = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            //int i, mx, mn;
-            //int n = maxAndMinArray.Length;
+            int[] maxAndMinArray = new int[] { 551, 2, 3557, 4, 577, 6, 7, -8, 9, 10 };
+            int iit, mx, mn;
+            int nt = maxAndMinArray.Length;
 
-            //mx = maxAndMinArray[0];
-            //mn = maxAndMinArray[0];
-
-
-            //for (i = 1; i < n; i++)
-            //{
-            //    if (maxAndMinArray[i] > mx)
-            //    {
-            //        mx = maxAndMinArray[i];
-            //    }
+            mx = maxAndMinArray[0];
+            mn = maxAndMinArray[0];
 
 
-            //    if (maxAndMinArray[i] < mn)
-            //    {
-            //        mn = maxAndMinArray[i];
-            //    }
-            //}
+            for (iit = 1; iit < nt; iit++)
+            {
+                if (maxAndMinArray[iit] > mx)
+                {
+                    mx = maxAndMinArray[iit];
+                }
 
 
-            //int maxIndex = Array.IndexOf(maxAndMinArray, mx);
-            //int minIndex = Array.IndexOf(maxAndMinArray, mn);
-            //Console.Write("Maximum element is: " + mx + " and it is on an index numbered: " + maxIndex);
-            //Console.Write("\n\nMinimum element is: " + mn + " and it is on an index numbered: " + minIndex);
-            //Console.ReadLine();
+                if (maxAndMinArray[iit] < mn)
+                {
+                    mn = maxAndMinArray[iit];
+                }
+            }
+
+
+            int maxIndex = Array.IndexOf(maxAndMinArray, mx);
+            int minIndex = Array.IndexOf(maxAndMinArray, mn);
+            Console.WriteLine("\b\b***TASK 03***");
+            Console.Write("Maximum element is: " + mx + " and it is on an index numbered: " + maxIndex);
+            Console.Write("\n\nMinimum element is: " + mn + " and it is on an index numbered: " + minIndex);
+            Console.WriteLine("\n\nInitializing task4... please press Enter!");
+            Console.ReadLine();
 
             #endregion
 
@@ -93,14 +108,14 @@ namespace ExtraExercises
             int[] arr4 = new int[100];
             int mm = 1, ctr = 0;
             int s1 = duplicates.Length;
-            int i, j;
+            int it, j;
 
 
             //counting how many numbers are duplicate
-            for (i = 0; i < s1; i++)
+            for (it = 0; it < s1; it++)
             {
-                arr2[i] = duplicates[i];
-                arr3[i] = 0;
+                arr2[it] = duplicates[it];
+                arr3[it] = 0;
             }
 
 
@@ -130,6 +145,8 @@ namespace ExtraExercises
 
 
             //printing the numbers that are duplicate
+
+            Console.WriteLine("\b\b***TASK 04***");
             Console.WriteLine("The numbers that are duplicates are: ");
             for (i = 0; i < s1; i++)
             {
@@ -156,20 +173,87 @@ namespace ExtraExercises
 
 
 
-
             Console.Write("\n\n");
+            Console.WriteLine("\n\nInitializing task5... please press Enter!");
             Console.ReadLine();
 
             #endregion
-   
+
             #region task5
             //         oddEvenArray = [10, 23, 44, 123, 55, 52, 98, 99, 102, 103, 152, 49]
             //         Write a program in C# Sharp to separate odd and even integers from the oddEvenArray in separate arrays
 
 
+            int[] oddEvenArray = new int[] { 10, 23, 44, 123, 55, 52, 98, 99, 102, 103, 152, 49 };
+
+            //Console.WriteLine("List of odd numbers: ");
+            //for (i = 0; i < oddEvenArray.Length; i++)
+            //{
+            //    if (oddEvenArray[i] % 2 != 0)
+            //        Console.Write(oddEvenArray[i] + " ");
+
+            //}
+
+            //Console.WriteLine("\n\nList of even numbers: ");
+            //for (i = 0; i < oddEvenArray.Length; i++)
+            //{
+            //    if (oddEvenArray[i] % 2 == 0)
+            //    {
+            //        Console.Write((oddEvenArray[i]) + " ");
+
+            //    }
+
+            //}
+            //Console.WriteLine();
 
 
 
+
+
+
+            //tuka nadolu probuvam da gji zachuvam vrednostite vo niza, ova nad nego kako nevazhecho go smetam.
+
+            int[] odd = new int[100];
+            int[] even = new int[100];
+            for (i = 0; i < oddEvenArray.Length; i++)
+            {
+                if (oddEvenArray[i] % 2 == 0)
+                {
+                    even[i] = oddEvenArray[i];
+
+                }
+                else
+                {
+                    odd[i] = oddEvenArray[i];
+
+                }
+
+            }
+
+            //....ama koga gji printam na mestoto kade shto ne treba da ima broj mi se zachuvuva nula
+
+            Console.WriteLine("\b\b***TASK 05***");
+            Console.WriteLine("The even numbers are: ");
+            for (i = 0; i < oddEvenArray.Length; i++)
+            {
+
+                Console.Write(even[i] + " ");
+
+            }
+
+            Console.WriteLine("\n\nThe odd numbers are: ");
+            for (i = 0; i < oddEvenArray.Length; i++)
+            {
+
+                Console.Write(odd[i] + " ");
+
+            }
+
+
+            //Console.Write("The even numbers are: {0}\nThe odd numebrs are: {1}\n", even[i], odd[i]); 
+            //vaka kako gorniov red izglea nemohze :D
+            Console.WriteLine("\n\nInitializing task6... please press Enter!");
+            Console.ReadLine();
 
 
             #endregion
@@ -180,24 +264,3 @@ namespace ExtraExercises
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
