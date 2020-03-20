@@ -31,8 +31,7 @@ namespace ExtraExercises
             double avg;
 
             Console.Write("\n\n");
-            Console.Write("Read 10 numbers and calculate sum and average:\n");
-            Console.Write("----------------------------------------------");
+            Console.Write("Please enter ten numbers!\n");            
             Console.Write("\n\n");
 
             Console.Write("Input the 10 numbers : \n");
@@ -257,6 +256,57 @@ namespace ExtraExercises
 
 
             #endregion
+
+            #region task6
+
+            //         6.Write a program in C# Sharp to read any Day Number in integer (from 1 to 7) and display on screen
+            //          the day with strings.Example: user enters 1, you should print Monday.
+
+
+            int dayNumber;
+
+            Console.Write("\n\n");
+            Console.Write("Enter a number from 1 to 7:\n");        
+            Console.Write("\n\n");
+
+
+            Console.Write("Input Day Number : ");
+            dayNumber = Convert.ToInt32(Console.ReadLine());
+
+            switch (dayNumber)
+            {
+                case 1:
+                    Console.Write("You have chosen Monday! \n");
+                    break;
+                case 2:
+                    Console.Write("You have chosen Tuesday. \n");
+                    break;
+                case 3:
+                    Console.Write("Welcome to Wednesday! \n");
+                    break;
+                case 4:
+                    Console.Write("Oh it's Thursday \n");
+                    break;
+                case 5:
+                    Console.Write("Finally Friday \n");
+                    break;
+                case 6:
+                    Console.Write("Saturday \n");
+                    break;
+                case 7:
+                    Console.Write("Sunday  \n");
+                    break;
+                default:
+                    Console.Write("Invalid day number. \nPlease try again ....\n");
+                    break;
+            }
+            Console.ReadLine();
+
+
+
+            #endregion
+
+
 
         }
 
