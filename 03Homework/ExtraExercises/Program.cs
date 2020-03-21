@@ -325,20 +325,46 @@ namespace ExtraExercises
 
 
 
+            string[] userNames = { "user1", "user2", "user3" };
+            string[] pass = { "first", "second", "third" };
 
+            while (true)
+            {
+                Console.Write("Input your username: \n");
+                string userInput = Console.ReadLine();
+                for (int iw = 0; iw < userNames.Length; iw++)
+                {
+                    if (userInput == userNames[iw])
+                    {
+                        while (true)
+                        {
+                            Console.WriteLine("Please insert your password");
+                            string passInput = Console.ReadLine();
+                            if (passInput == pass[iw])
+                            {
+                                Console.WriteLine("You are now logged in!");
+                                Console.ReadLine();
+                                break;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Wrong user pass conbination");
+                                Console.ReadLine();
+                            }
+                        }
 
+                    }
 
+                }
+                break;
 
-
-
+            }
 
 
             #endregion
 
 
-
         }
-
 
 
     }
