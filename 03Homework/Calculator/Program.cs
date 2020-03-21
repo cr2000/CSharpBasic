@@ -7,6 +7,14 @@ namespace Calculator
         static void Main(string[] args)
         {
             Console.WriteLine("Enter the desired operation +, -, /, * ");
+            //if (Console.ReadLine() == "s" || Console.ReadLine() == "S")
+            //{
+            //    Console.ForegroundColor = ConsoleColor.Green;
+            //    Console.WriteLine("Thanks for using the calculator! The aplication will automatically close.");
+            //    Console.ReadLine();
+            //    return;
+            //}
+
             string operationChosen = Console.ReadLine();
             if (operationChosen == "")
             {
@@ -25,18 +33,20 @@ namespace Calculator
                 Console.ReadLine();
                 return;
             }
+            
 
-            Console.WriteLine("Please Enter another number: ");
-            //double num2 = Convert.ToDouble(Console.ReadLine());
-            double num2;
-            bool isNumericScnd = double.TryParse(Console.ReadLine(), out num2);
-            if (isNumericScnd != true)
-            {
-                Console.WriteLine("Invalid number entered. The application will automaticaly close.");
-                Console.ReadLine();
-                return;
-            }
 
+                Console.WriteLine("Please Enter another number: ");
+                //double num2 = Convert.ToDouble(Console.ReadLine());
+                double num2;
+                bool isNumericScnd = double.TryParse(Console.ReadLine(), out num2);
+                if (isNumericScnd != true)
+                {
+                    Console.WriteLine("Invalid number entered. The application will automaticaly close.");
+                    Console.ReadLine();
+                    return;
+                }
+            
 
 
             if (operationChosen == "+")
