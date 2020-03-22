@@ -8,12 +8,12 @@ namespace Calculator
         {
             while (true)
             {
-
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.WriteLine("Enter the desired operation +, -, /, * ");
                 string operationChosen = Console.ReadLine();
 
-                if (operationChosen != "+" && operationChosen != "-" && operationChosen != "*" && operationChosen != "/" && operationChosen != "s")
+                if (operationChosen != "+" && operationChosen != "-" && operationChosen != "*" && operationChosen != "/" && operationChosen != "s" && operationChosen != "S")
                 {
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.WriteLine("Invalid operation selected. Please press enter and try try again.");
@@ -62,11 +62,13 @@ namespace Calculator
 
                 if (operationChosen == "+")
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(num1 + num2);
                     Console.WriteLine("Please press enter to make another calculation.");
                 }
                 if (operationChosen == "-")
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(num1 - num2);
                     Console.WriteLine("Please press enter to make another calculation.");
                 }
@@ -74,14 +76,17 @@ namespace Calculator
                 {
                     if (num2 == 0)
                     {
+                        
                         Console.BackgroundColor = ConsoleColor.Red;
                         Console.WriteLine("Division with zero is not possible. Please press enter and try again.");
                     }
-                    Console.WriteLine(num1 / num2);
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    Console.WriteLine(num1 / num2);                   
                     Console.WriteLine("Please press enter to make another calculation.");
                 }
                 if (operationChosen == "*")
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(num1 * num2);
                     Console.WriteLine("Please press enter to make another calculation.");
                 }
