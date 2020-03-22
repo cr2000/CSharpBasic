@@ -11,9 +11,17 @@ namespace Calculator
 
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.WriteLine("Enter the desired operation +, -, /, * ");
-
-
                 string operationChosen = Console.ReadLine();
+
+                if (operationChosen != "+" && operationChosen != "-" && operationChosen != "*" && operationChosen != "/" && operationChosen != "s")
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid operation selected. Please press enter and try try again.");
+                    Console.ReadLine();
+                    continue;
+                }
+
+             
                 if (operationChosen == "s" || operationChosen == "S")
                 {
                     Console.BackgroundColor = ConsoleColor.Green;
@@ -22,15 +30,7 @@ namespace Calculator
                     return;
                 }
 
-                if (operationChosen != "+" && operationChosen != "-" && operationChosen != "*" && operationChosen != "/")
-                {
-                    Console.BackgroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Invalid operation selected. Please press enter and try try again.");
-                    Console.ReadLine();
-                    continue;
-                }
-
-               
+                            
 
                 Console.WriteLine("Please Enter a number: ");
                 //double num1 = Convert.ToDouble(Console.ReadLine());
