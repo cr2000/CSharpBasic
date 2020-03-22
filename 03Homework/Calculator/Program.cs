@@ -14,14 +14,6 @@ namespace Calculator
 
 
                 string operationChosen = Console.ReadLine();
-                if (operationChosen == "")
-                {
-                    Console.BackgroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Invalid operation selected. Please try again.");
-                    Console.ReadLine();
-                    continue;
-                }
-
                 if (operationChosen == "s" || operationChosen == "S")
                 {
                     Console.BackgroundColor = ConsoleColor.Green;
@@ -29,6 +21,16 @@ namespace Calculator
                     Console.ReadLine();
                     return;
                 }
+
+                if (operationChosen != "+" && operationChosen != "-" && operationChosen != "*" && operationChosen != "/")
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid operation selected. Please press enter and try try again.");
+                    Console.ReadLine();
+                    continue;
+                }
+
+               
 
                 Console.WriteLine("Please Enter a number: ");
                 //double num1 = Convert.ToDouble(Console.ReadLine());
@@ -61,23 +63,27 @@ namespace Calculator
                 if (operationChosen == "+")
                 {
                     Console.WriteLine(num1 + num2);
+                    Console.WriteLine("Please press enter to make another calculation.");
                 }
                 if (operationChosen == "-")
                 {
                     Console.WriteLine(num1 - num2);
+                    Console.WriteLine("Please press enter to make another calculation.");
                 }
                 if (operationChosen == "/")
                 {
                     if (num2 == 0)
                     {
                         Console.BackgroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Division with zero is not possible. Please try again.");
+                        Console.WriteLine("Division with zero is not possible. Please press enter and try again.");
                     }
                     Console.WriteLine(num1 / num2);
+                    Console.WriteLine("Please press enter to make another calculation.");
                 }
                 if (operationChosen == "*")
                 {
                     Console.WriteLine(num1 * num2);
+                    Console.WriteLine("Please press enter to make another calculation.");
                 }
                 Console.ReadLine();
 
