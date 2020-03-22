@@ -11,7 +11,7 @@ namespace Calculator
 
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.WriteLine("Enter the desired operation +, -, /, * ");
-               
+
 
                 string operationChosen = Console.ReadLine();
                 if (operationChosen == "")
