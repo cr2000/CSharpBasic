@@ -31,10 +31,14 @@ namespace LoginRegister
                         Console.WriteLine("Please enter your username/emal: ");
                         string username = Console.ReadLine();
                         bool userCorrect = false;
-                        if (username.ToLower().Contains('@') && username.ToLower().Contains('.') && username.Length < 30)
+                        if (username.ToLower().Contains('@') && username.ToLower().Contains('.') && username.Length < 30 && !char.IsNumber(username[0]) && !char.IsNumber(username[username.Length-1]) && !char.IsSymbol(username[0]) && !char.IsSymbol(username[username.Length-1]))
+
+
                         {
                             userCorrect = true;
                         }
+                        
+
                         if (userCorrect)
                         {
                             Console.WriteLine("Please enter a password:");
