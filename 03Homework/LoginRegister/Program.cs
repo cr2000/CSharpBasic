@@ -86,7 +86,7 @@ namespace LoginRegister
                             Array.Resize(ref listOfPasswords, listOfPasswords.Length + 1);
                             listOfPasswords[listOfPasswords.Length - 1] = password;
                             Console.WriteLine("You have successfully registered, please press Enter and then follow the instructon to LogIn.");
-                            
+
 
                         }
 
@@ -108,6 +108,12 @@ namespace LoginRegister
                     case "2":
 
                         Console.WriteLine("Please enter your username/email: ");
+                        string userName = Console.ReadLine();
+                        if (UserValidation(userName))
+                        {
+                            Console.WriteLine("Please enter your password: ");
+
+                        }
 
 
                         break;
@@ -115,7 +121,8 @@ namespace LoginRegister
 
 
 
-                    case "EXIT":
+                    case "exit":
+
 
                         return;
 
@@ -150,5 +157,66 @@ namespace LoginRegister
 
 
         }
+
+        public static bool UserValidation(string username)
+        {
+            if (username.ToLower().Contains('@')
+                            && username.ToLower().Contains('.')
+                            && username.Length < 30
+                            && !char.IsNumber(username[0])
+                            && !char.IsNumber(username[username.Length - 1])
+                            && char.IsLetterOrDigit(username[0])
+                            && char.IsLetterOrDigit(username[username.Length - 1]))
+            {
+                return true;
+            }
+            Console.WriteLine("Your username is incorrect. Please try again.");
+            return false;
+
+
+        }
+        public static bool PassValidation(string password)
+        {
+            var containsNumber = 0;
+            var containsUpper = 0;
+            var containsLower = 0;
+            var containsSymbols = 0;
+
+            if (password.Length >= 10 && !String.IsNullOrEmpty(password))
+            {
+                foreach (var character in password)
+                {
+                    if (Char.IsNumber(character))
+                        containsNumber++;
+                    if (Char.IsUpper(character))
+                        containsUpper++;
+                    if (Char.IsLower(character))
+                        containsLower++;
+                    if (Char.IsSymbol(character))
+                        containsSymbols++;
+                }
+            }
+            
+            if (containsNumber > 0 && containsUpper > 0 && containsLower > 0 && containsSymbols > 1)
+            {
+
+                Console.WriteLine("You have successfully registered, please press Enter and then follow the instructon to LogIn.");
+
+            }
+            else
+            {
+                Console.WriteLine("You have entered an invalid password, please try again!");
+            }
+
+
+
+
+
+        }
+
     }
+
 }
+
+
+
