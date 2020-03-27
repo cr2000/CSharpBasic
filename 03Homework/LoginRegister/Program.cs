@@ -10,14 +10,15 @@ namespace LoginRegister
             {
 
 
-                Console.WriteLine("Please enter 1 if you want to register, or 2 if you want to login.");
-                string registerOrLogin = Console.ReadLine();
-                //if (registerOrLogin != "1" && registerOrLogin != "2") 
-                //{
-                //    Console.WriteLine("Invalid choise. Pleaase try again!");
-                //    continue;
+                Console.WriteLine("Please enter 1 if you want to register, 2 if you want to login, or type EXIT if you want to EXIT");
+                //kako mozham stringov gore da go napravam vo razlichni boi, do prvata zapirka vo edna, do vtorata vo druga itn...
 
-                //}
+                string registerOrLogin = Console.ReadLine();
+                string[] listOfEmails = new string[] { };
+                string[] listOfPasswords = new string[] { };
+
+
+
 
 
 
@@ -30,34 +31,95 @@ namespace LoginRegister
 
                         Console.WriteLine("Please enter your username/emal: ");
                         string username = Console.ReadLine();
-                        bool userCorrect = false;
-                        if (username.ToLower().Contains('@') && username.ToLower().Contains('.') && username.Length < 30 && !char.IsNumber(username[0]) && !char.IsNumber(username[username.Length-1]) && !char.IsSymbol(username[0]) && !char.IsSymbol(username[username.Length-1]))
+
+                        if (username.ToLower().Contains('@')
+                            && username.ToLower().Contains('.')
+                            && username.Length < 30
+                            && !char.IsNumber(username[0])
+                            && !char.IsNumber(username[username.Length - 1])
+                            && char.IsLetterOrDigit(username[0])
+                            && char.IsLetterOrDigit(username[username.Length - 1])) //neznaev kako da proveram da ne e simbol, morav vaka :)
 
 
                         {
-                            userCorrect = true;
-                        }
-                        
-
-                        if (userCorrect)
-                        {
+                            Array.Resize(ref listOfEmails, listOfEmails.Length + 1);
+                            listOfEmails[listOfEmails.Length - 1] = username;
                             Console.WriteLine("Please enter a password:");
+
                         }
-
-
-                        if (userCorrect == false)
+                        else
                         {
                             Console.WriteLine("You have entered an invalid username, please try again!");
+                            break;
                         }
 
+
+
+
+                        string password = Console.ReadLine();
+
+                        var containsNumber = 0;
+                        var containsUpper = 0;
+                        var containsLower = 0;
+                        var containsSymbols = 0;
+
+
+
+
+                        if (password.Length >= 10 && !String.IsNullOrEmpty(password))
+                        {
+                            foreach (var character in password)
+                            {
+                                if (Char.IsNumber(character))
+                                    containsNumber++;
+                                if (Char.IsUpper(character))
+                                    containsUpper++;
+                                if (Char.IsLower(character))
+                                    containsLower++;
+                                if (Char.IsSymbol(character))
+                                    containsSymbols++;
+
+                            }
+                        }
+                        if (containsNumber > 0 && containsUpper > 0 && containsLower > 0 && containsSymbols > 1)
+                        {
+                            Array.Resize(ref listOfPasswords, listOfPasswords.Length + 1);
+                            listOfPasswords[listOfPasswords.Length - 1] = password;
+                            Console.WriteLine("You have successfully registered, please press Enter and then follow the instructon to LogIn.");
+                            
+
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("You have entered an invalid password, please try again!");
+                        }
+
+
                         break;
+
+
+
+
+
 
 
 
                     case "2":
 
+                        Console.WriteLine("Please enter your username/email: ");
+
 
                         break;
+
+
+
+
+                    case "EXIT":
+
+                        return;
+
+
 
 
 
