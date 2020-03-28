@@ -81,7 +81,7 @@ namespace _05Homework
             max = 0;
             for (i = 0; i < 255; i++)
             {
-                if (i != 32)
+                //if (i != 32)
                 {
                     if (ch_fre[i] > ch_fre[max])
                         max = i;
@@ -91,13 +91,17 @@ namespace _05Homework
 
 
 
+            #endregion
 
 
 
+            #region
+            //            Task 3 again
+            //* Find maximum occurring character in a string* Example: "We want this situation with covid-19 to ends!"
+            //  
 
 
-
-
+            string covid19 = "We want this situation with covid-19 to ends!";
 
 
             #endregion

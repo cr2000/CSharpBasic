@@ -14,7 +14,7 @@ namespace LoginRegister
                 //kako mozham stringov gore da go napravam vo razlichni boi, do prvata zapirka vo edna, do vtorata vo druga itn...
                 //isto taka, ne mi uspeva da napravam da mozhe da vnese exit so mali i so golemi bukvi koa go bira toj case od switchot.
 
-                string registerOrLogin = Console.ReadLine();
+                string registerOrLogin = Console.ReadLine().ToLower();
                 string[] listOfEmails = new string[] { };
                 string[] listOfPasswords = new string[] { };
 
