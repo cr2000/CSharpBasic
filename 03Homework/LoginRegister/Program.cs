@@ -12,6 +12,7 @@ namespace LoginRegister
 
                 Console.WriteLine("Please enter 1 if you want to register, 2 if you want to login, or type EXIT if you want to EXIT");
                 //kako mozham stringov gore da go napravam vo razlichni boi, do prvata zapirka vo edna, do vtorata vo druga itn...
+                //isto taka, ne mi uspeva da napravam da mozhe da vnese exit so mali i so golemi bukvi koa go bira toj case od switchot.
 
                 string registerOrLogin = Console.ReadLine();
                 string[] listOfEmails = new string[] { };
@@ -110,13 +111,22 @@ namespace LoginRegister
                         Console.WriteLine("Please enter your username/email: ");
                         string userName = Console.ReadLine();
                         if (UserValidation(userName))
-                        {
                             Console.WriteLine("Please enter your password: ");
-
+                        string passForReg = Console.ReadLine();
+                        if (PassValidation(passForReg))
+                        {
+                            Console.WriteLine("Everything went fine."); 
                         }
-
+                        int emailIndex = Array.IndexOf(listOfEmails, userName);
+                        int passIndex = Array.IndexOf(listOfPasswords, passForReg);
+                        
+                        
+                        if (emailIndex > 0 && emailIndex == passIndex && passIndex > 0)
+                        
+                            Console.WriteLine($"Welcome to the system!");
 
                         break;
+                           
 
 
 
@@ -196,16 +206,18 @@ namespace LoginRegister
                         containsSymbols++;
                 }
             }
-            
+
             if (containsNumber > 0 && containsUpper > 0 && containsLower > 0 && containsSymbols > 1)
             {
 
-                Console.WriteLine("You have successfully registered, please press Enter and then follow the instructon to LogIn.");
+               
+                return true;
 
             }
             else
             {
                 Console.WriteLine("You have entered an invalid password, please try again!");
+                return false;
             }
 
 
