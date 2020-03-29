@@ -150,7 +150,7 @@ namespace _05Homework
             //  
 
 
-            string covid19 = "aWe waaaaaaaaant this situa tion with covid-19 to ends!";
+            string covid19 = "aWe waaaaaaaaant this situa tion with ccccccccccccccccccccccccovid-19 to ends!";
 
 
             char[] covid19toChar = covid19.ToCharArray();
