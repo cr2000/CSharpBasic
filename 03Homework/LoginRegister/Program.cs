@@ -48,13 +48,13 @@ namespace LoginRegister
                             Console.WriteLine("Please enter a password:");
 
                         }
+
+
                         else
                         {
                             Console.WriteLine("You have entered an invalid username, please try again!");
                             break;
                         }
-
-
 
 
                         string password = Console.ReadLine();
@@ -84,12 +84,30 @@ namespace LoginRegister
                         }
                         if (containsNumber > 0 && containsUpper > 0 && containsLower > 0 && containsSymbols > 1)
                         {
+                            foreach (var oldpassword in listOfPasswords)
+                            {
+                                if (password == oldpassword)
+                                {
+                                    Console.WriteLine("Your password is allready taken.");
+                                    break;
+                                }
+                            }
+
+
                             Array.Resize(ref listOfPasswords, listOfPasswords.Length + 1);
                             listOfPasswords[listOfPasswords.Length - 1] = password;
+
+
+
+
+
+
                             Console.WriteLine("You have successfully registered, please press Enter and then follow the instructon to LogIn.");
 
 
                         }
+
+
 
                         else
                         {
@@ -98,6 +116,7 @@ namespace LoginRegister
 
 
                         break;
+
 
 
 
@@ -115,18 +134,33 @@ namespace LoginRegister
                         string passForReg = Console.ReadLine();
                         if (PassValidation(passForReg))
                         {
-                            Console.WriteLine("Everything went fine."); 
+                            Console.WriteLine("Everything went fine.");
+                            foreach (var user in listOfEmails)
+                            {
+                                if (user == userName)
+                                {
+                                    continue;
+                                }
+                            }
+
+                            foreach (var passwordEntered in listOfPasswords)
+                            {
+                                if (passwordEntered == passForReg)
+                                {
+                                    Console.WriteLine("Welcome to the system!");
+
+                                }
+
+                            }
                         }
-                        int emailIndex = Array.IndexOf(listOfEmails, userName);
-                        int passIndex = Array.IndexOf(listOfPasswords, passForReg);
-                        
-                        
-                        if (emailIndex > 0 && emailIndex == passIndex && passIndex > 0)
-                        
-                            Console.WriteLine($"Welcome to the system!");
+
+
+
+
+                          
 
                         break;
-                           
+
 
 
 
@@ -210,7 +244,7 @@ namespace LoginRegister
             if (containsNumber > 0 && containsUpper > 0 && containsLower > 0 && containsSymbols > 1)
             {
 
-               
+
                 return true;
 
             }
