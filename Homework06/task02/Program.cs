@@ -19,11 +19,45 @@
 //SecondCourse objects like a properties to Project object. Call Project's object Passed method to see if the student passed.
 namespace task02
 {
+    public enum Grades
+    {
+        grade5 = 5, grade6, grade7, grade8, grade9, grade10
+
+    }
+
+    public class FirstCourse
+    {
+        public string CourseName;
+        public bool HasPassed = false;
+
+    }
+
+    public class SecondCourse
+    {
+        public string CourseName;
+        public int Grade;
+        public bool HasPassed = false;
+
+    }
+
+
+    public class Project
+    {
+        
+
+    }
+
+
+
+
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var firstCourse = new FirstCourse();
+            var seconCourse = new FirstCourse();
+            var thirdCourse = new SecondCourse();
+            var fourthCourse = new SecondCourse();
         }
     }
 }

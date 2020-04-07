@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 //Task 1
 
 //Create a class "PhotoAlbum" with a private attribute "numberOfPages".
@@ -49,8 +49,7 @@ namespace Task01
 
 
         private int NumberOFPages;
-        //kako da napravam private metod so numberofpages sho kje bide povikan vo nekoj public metod?
-        //ili ne treba taka?
+      
         public void GetNumberOfPages()
         {
             Console.WriteLine($"I have {NumberOFPages} pages. :)");
