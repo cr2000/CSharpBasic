@@ -27,25 +27,71 @@ namespace task02
 
     public class FirstCourse
     {
+        public FirstCourse(string courseName, Grades grade)
+        {
+            CourseName = courseName;
+            Grade = grade;
+        }
+
         public string CourseName;
-        public bool HasPassed = false;
+        public Grades Grade;
+
+        public bool hasPassed()
+        {
+            if (Grade == Grades.grade5)
+                return false;
+            else
+                return true;
+        }
 
     }
+
 
     public class SecondCourse
     {
+        public SecondCourse(string courseName, Grades grade)
+        {
+            CourseName = courseName;
+            Grade = grade;
+        }
+
         public string CourseName;
-        public int Grade;
-        public bool HasPassed = false;
+        public Grades Grade;
+
+        public bool hasPassed()
+        {
+            if (Grade == Grades.grade5)
+                return false;
+            else
+                return true;
+        }
 
     }
+
+
 
 
     public class Project
     {
-        
+        public void Passed(bool[] array)
+        {
+            int cnt = 0;
+            foreach (var grade in array)
 
+                if (grade == false)
+                    cnt++;
+
+            if (cnt > 2)
+            {
+                Console.WriteLine("You Fail Academy");
+            }
+            else
+            {
+                Console.WriteLine("You passed Academy");
+            }
+        }
     }
+
 
 
 
@@ -54,10 +100,21 @@ namespace task02
     {
         static void Main(string[] args)
         {
-            var firstCourse = new FirstCourse();
-            var seconCourse = new FirstCourse();
-            var thirdCourse = new SecondCourse();
-            var fourthCourse = new SecondCourse();
+            var firstCourse = new FirstCourse("JS", Grades.grade5);
+            var secondCourse = new FirstCourse("Angular", Grades.grade5);
+            var thirdCourse = new SecondCourse("C#", Grades.grade10);
+            var fourthCourse = new SecondCourse("React", Grades.grade5);
+            Project FirstProject = new Project();
+            bool[] gradesToBool = { firstCourse.hasPassed(), secondCourse.hasPassed(), thirdCourse.hasPassed(), fourthCourse.hasPassed() };
+            FirstProject.Passed(gradesToBool);
+            //foreach (var item in gradesToBool)
+            //{
+            //    Console.WriteLine(item);
+
+            //}
+
+
+            Console.ReadLine();
         }
     }
 }
