@@ -1,4 +1,7 @@
 ﻿using System;
+using task02.Entities;
+using task02.Enums;
+
 //Task 2
 
 //In this exercise you are asked to program three simple classes which keep track of the grading of a sample student.
@@ -19,99 +22,21 @@
 //SecondCourse objects like a properties to Project object. Call Project's object Passed method to see if the student passed.
 namespace task02
 {
-    public enum Grades
-    {
-        grade5 = 5, grade6, grade7, grade8, grade9, grade10
-
-    }
-
-    public class FirstCourse
-    {
-        public FirstCourse(string courseName, Grades grade)
-        {
-            CourseName = courseName;
-            Grade = grade;
-        }
-
-        public string CourseName;
-        public Grades Grade;
-
-        public bool hasPassed()
-        {
-            if (Grade == Grades.grade5)
-                return false;
-            else
-                return true;
-        }
-
-    }
-
-
-    public class SecondCourse
-    {
-        public SecondCourse(string courseName, Grades grade)
-        {
-            CourseName = courseName;
-            Grade = grade;
-        }
-
-        public string CourseName;
-        public Grades Grade;
-
-        public bool hasPassed()
-        {
-            if (Grade == Grades.grade5)
-                return false;
-            else
-                return true;
-        }
-
-    }
-
-
-
-
-    public class Project
-    {
-        public void Passed(bool[] array)
-        {
-            int cnt = 0;
-            foreach (var grade in array)
-
-                if (grade == false)
-                    cnt++;
-
-            if (cnt > 2)
-            {
-                Console.WriteLine("You Fail Academy");
-            }
-            else
-            {
-                Console.WriteLine("You passed Academy");
-            }
-        }
-    }
-
-
-
-
-
+   
     class Program
     {
         static void Main(string[] args)
         {
             var firstCourse = new FirstCourse("JS", Grades.grade5);
-            var secondCourse = new FirstCourse("Angular", Grades.grade5);
+            var secondCourse = new FirstCourse("Angular", Grades.grade7);
             var thirdCourse = new SecondCourse("C#", Grades.grade10);
             var fourthCourse = new SecondCourse("React", Grades.grade5);
-            Project FirstProject = new Project();
-            bool[] gradesToBool = { firstCourse.hasPassed(), secondCourse.hasPassed(), thirdCourse.hasPassed(), fourthCourse.hasPassed() };
-            FirstProject.Passed(gradesToBool);
-            //foreach (var item in gradesToBool)
-            //{
-            //    Console.WriteLine(item);
 
-            //}
+            Project FirstProject = new Project();
+
+            bool[] gradesToBool = { firstCourse.hasPassed(), secondCourse.hasPassed(), thirdCourse.hasPassed(), fourthCourse.hasPassed() };
+
+            FirstProject.PassedTheAcademy(gradesToBool);      
 
 
             Console.ReadLine();
