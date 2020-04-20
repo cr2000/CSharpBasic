@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CodeOrganizer.RAndomSSN
 {
-    public class Random
+    public class HahahahRandom
     {
         public static long GenerateSSN()
         {
