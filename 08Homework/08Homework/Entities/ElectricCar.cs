@@ -40,7 +40,7 @@ namespace _08Homework.Entities
             if ((minutes / 10) + BatteryCapacity <= 100)
             {
                 BatteryCapacity = BatteryCapacity + (minutes / 10);
-                Console.WriteLine($"The car is rechared {minutes / 10}% and now has {BatteryCapacity}%");
+                Console.WriteLine($"The car has recharged {minutes / 10}% and now has {BatteryCapacity}%");
                 return;
 
             }
