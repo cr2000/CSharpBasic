@@ -27,7 +27,7 @@ namespace _08Homework
             Console.WriteLine(Audi.BatteryCapacity);
             Audi.Drive(400);
             Console.WriteLine(Audi.BatteryCapacity);
-            Audi.Recharge(800);
+            Audi.Recharge(750);
 
             FuelCar Ferrari = new FuelCar();
             Ferrari.CarConsumption = Consumption.High;

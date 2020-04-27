@@ -20,7 +20,7 @@ namespace _08Homework.Entities
         public void Drive(int distance)
         {
             BatteryUsage = (distance * (int)CarConsumption) / 10;
-            Console.WriteLine($"The car used {BatteryUsage}% of the battery.");
+            Console.WriteLine($"The car will use {BatteryUsage}% of the battery to make that trip.");
             if (BatteryUsage < BatteryCapacity)
             {
                 BatteryCapacity = BatteryCapacity - BatteryUsage;

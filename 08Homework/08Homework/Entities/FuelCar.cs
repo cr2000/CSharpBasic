@@ -19,7 +19,7 @@ namespace _08Homework.Entities
         public void Drive(int distance)
         {
             int FuelUsed = distance * (int)CarConsumption / 10;
-            Console.WriteLine($"The car has used {FuelUsed} units of fuel.");
+            Console.WriteLine($"The car will use {FuelUsed} units of fuel to travel the desired distance.");
             if (CurrentFuel > FuelUsed)
             {
                 CurrentFuel = CurrentFuel - FuelUsed;
