@@ -51,18 +51,8 @@ namespace ProductsG8.Helpers
                 Price = price,
                 Category = category
                 
-            });
-            
-            
-            var newProduct = productList.TakeLast(1).ToList();
-            foreach (var item in newProduct)
-            {
-                Console.WriteLine(item.Name);
-            }
-
+            });       
         }
-
-
 
 
         //Remove product // and a method to remove it - use name as parameter
