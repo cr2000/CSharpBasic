@@ -37,11 +37,11 @@ namespace MoviesApp
             {
                 Console.WriteLine(movie);
             }
-            
+
 
 
             //*4 Find all movies TITLES and RATING that have rating higher then 8.0
-            var titlesAndRatingsMovies = movies.Where(movie => movie.Rating > 8).Select(movie => movie.Title).ToList();
+            var titlesAndRatingsMovies = movies.Where(movie => movie.Rating > 8).Select(movie => new { movie.Title, movie.Rating }).ToList();
             Console.WriteLine("\nHigher than 8 rating:");
             foreach (var movie in titlesAndRatingsMovies)
             {
@@ -59,9 +59,9 @@ namespace MoviesApp
 
             //*6 Find last 3 movies TITLES and DURATION that have duration less then 2 hours
 
-            var shortmOVIES = movies.Where(MOVIE => MOVIE.Duration < 120).TakeLast(3).ToList();
+            var shortmOVIES = movies.Where(MOVIE => MOVIE.Duration < 120).Select(movie => new { movie.Title, movie.Duration}).TakeLast(3).ToList();
             Console.WriteLine("\nThe last 3 movies with less than 120 minutes duration are:");
-            shortmOVIES.ForEach(movie => Console.WriteLine(movie.Title));
+            shortmOVIES.ForEach(movie => Console.WriteLine(movie));
 
 
           
@@ -73,9 +73,9 @@ namespace MoviesApp
             
 
             //8 *Find all movies with TITLES that don't start with A and TITLES include more than 7 characters
-            var allMoviesWithA = movies.Where(movie => !movie.Title.StartsWith('A')).Where(movie => movie.Title.Count() > 7).ToList();
-            Console.WriteLine("\nDont start with A:");
-            allMoviesWithA.ForEach(movie => Console.WriteLine(movie.Title));
+            var allMoviesWithA = movies.Where(movie => !movie.Title.StartsWith('A')).Where(movie => movie.Title.Count() > 7).Select(movie => new {movie.Title, movie.Duration, movie.Rating, movie.Year }).ToList();
+            Console.WriteLine("\n888Dont start with A:");
+            allMoviesWithA.ForEach(movie => Console.WriteLine(movie));
 
             //9* Find all movies RATINGS that have RATINGS higher than 7.2, DURATIONS less then 1hour
             //  and 50min
@@ -91,7 +91,7 @@ namespace MoviesApp
             var lastAllMovies = movies.Where(movie => movie.Title.Length < 10)
                 .Where(movie => movie.Duration > 60)
                 .Where(movie => movie.Rating > 6.7)
-                .Select(movie => movie.Title)
+                .Select(movie => new { movie.Title, movie.Rating })
                 .OrderBy(title => title)
                 .ToList();
             Console.WriteLine("\nLetssee:");
