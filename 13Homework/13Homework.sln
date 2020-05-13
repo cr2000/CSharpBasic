@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameCenter", "..\..\05_CSharpBasic1\gitcodeC#\skwd8-05-oopcsharp\g1\Class13Prep\TeamSource\GameCenter\GameCenter.csproj", "{550AC3B4-F16F-4E9F-A58B-98C8A78059B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeamSource", "..\..\05_CSharpBasic1\gitcodeC#\skwd8-05-oopcsharp\g1\Class13Prep\TeamSource\TeamSource\TeamSource.csproj", "{DD6E21DD-F574-402D-8AFE-1BE3290DEE3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{550AC3B4-F16F-4E9F-A58B-98C8A78059B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550AC3B4-F16F-4E9F-A58B-98C8A78059B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550AC3B4-F16F-4E9F-A58B-98C8A78059B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550AC3B4-F16F-4E9F-A58B-98C8A78059B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD6E21DD-F574-402D-8AFE-1BE3290DEE3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD6E21DD-F574-402D-8AFE-1BE3290DEE3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD6E21DD-F574-402D-8AFE-1BE3290DEE3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD6E21DD-F574-402D-8AFE-1BE3290DEE3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF18AAD9-B5EE-4556-9737-5F20685B36B5}
+	EndGlobalSection
+EndGlobal
