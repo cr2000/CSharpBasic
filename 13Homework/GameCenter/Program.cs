@@ -65,14 +65,32 @@ namespace GameCenter
             // HOMEWORK
 
             // Find all coaches NAMES with Age > 50
+
+
             // Order players by AGE - DESC
+
+
             // Find player with highest RebPerGame
+
+
             // Find all players with PtsPerGame > 20
+
+
             // Find all players NAMES older then 30 years
+
+
             // Group players by age
+
+
             // Find All players NAMES and PtsPerGame if have RebPerGame > 7.0
+
+
             // Find first 3 players with highest PtsPerGame
+
+
             // Find the team which has the player with highest PtsPerGame
+
+
             // Find first 4 players with highest RebPerGame and order them by PtsPerGame - ASC
 
         }
